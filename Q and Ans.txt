@@ -1,0 +1,54 @@
+## Answers to Questions
+
+
+
+### 1. What is the difference between getElementById, getElementsByClassName, and querySelector / querySelectorAll?
+
+Answer: 1) document.getElementById("title");
+           
+        2)document.getElementsByClassName("card");
+
+        3)document.querySelector(".card");
+ 
+         4)document.querySelectorAll(".card");
+
+
+
+
+### 2. How do you create and insert a new element into the DOM?
+
+Answer: Create a new element using `document.createElement()`, then add content to it, and finally insert it into the DOM using methods like `appendChild()` or `append()`.
+
+
+
+
+
+### 3. What is Event Bubbling? And how does it work?
+
+Answer:  Event Bubbling হলো এমন একটি প্রক্রিয়া যেখানে কোনো child element এ event ঘটলে সেই event ধাপে ধাপে তার parent → grandparent → document পর্যন্ত উপরের দিকে চলে যায়।
+
+যখন আমরা একটি element এ click করি, প্রথমে সেই element এ event হয়, তারপর সেটা তার parent এ যায়, তারপর body, তারপর document পর্যন্ত bubble করে।
+
+
+
+
+
+### 4. What is Event Delegation in JavaScript? Why is it useful?
+
+Answer: Event Delegation হলো এমন একটি পদ্ধতি যেখানে আমরা আলাদা আলাদা child element এ event না দিয়ে, তাদের common parent element এ একবার event listener যোগ করি এবং `event.target` ব্যবহার করে বুঝি কোন element এ click হয়েছে।
+
+এটা কোড কমায়, performance ভালো করে এবং dynamically তৈরি হওয়া নতুন element এর জন্যও আলাদা করে event যোগ করতে হয় না।
+
+
+
+
+
+### 5. What is the difference between preventDefault() and stopPropagation() methods?
+
+
+Answer: preventDefault() এবং  stopPropagation() এর পার্থক্য হলো:
+
+preventDefault() কোনো element এর default behavior বন্ধ করে দেয় (যেমন: form submit হওয়া বা link এ click করলে অন্য page এ যাওয়া বন্ধ করা)।
+
+stopPropagation() event টাকে parent element এ যাওয়া থেকে থামিয়ে দেয়, অর্থাৎ event bubbling বন্ধ করে।
+
